@@ -17,19 +17,36 @@ public class Product extends Main{
 
     @Override
     public String toString() {
-        return "Code:                " + code + "\n" +
+        return  "Code:               " + code + "\n" +
                 "Description:        " + description + "\n" +
                 "Price:              " + this.getFormattedPrice(price) + "\n";
     }
 
-    private String getFormattedPrice(double price) {
+    public String getFormattedPrice(double price) {
         // Use the NumberFormat class to format the price to 2 decimal places
-        DecimalFormat df = new DecimalFormat("#.00"); // Set your desired format here.
-        return df.format(price);
+        DecimalFormat format = new DecimalFormat("0.00");
+       return format.format(price);
     }
-
+public double getPrice(){
+        return this.price;
+}
+public void setPrice(double price){
+        this.price = price;
+}
     // Create public access for the count variable
     public static int getCount() {
         return count;
     }
+    public String getCode(){
+        return this.code;
+    }
+    public String getDescription(){
+        return this.description;
+    }
+  public void setDescription(String description){
+        this.description=description;
+  }
+  public void setCode(String code){
+        this.code=code;
+  }
 }
