@@ -47,6 +47,8 @@ public void setPrice(double price){
         this.description=description;
   }
   public void setCode(String code){
-        this.code=code;
+        this.code=code; }
+  public boolean equals(){
+        return true;
   }
 }

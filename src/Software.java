@@ -23,4 +23,13 @@ public class Software extends Product {
                 "Programmer:         " + getProgrammer() + "\n" +
                 "Price:              " + this.getFormattedPrice(getPrice()) + "\n";
     }
+    @Override
+    public boolean equals(Object a){
+        Software c = (Software)a;
+        if (((Software) a).getProgrammer().equalsIgnoreCase(c.getProgrammer())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

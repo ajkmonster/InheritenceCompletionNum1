@@ -27,5 +27,8 @@ public class Main{
         s.setOs("Windows");
         s.setProgrammer("Fi");
         System.out.println(s.toString());
+
+        System.out.println(c.equals(b));
+        System.out.println(s.equals(s));
     }
 }

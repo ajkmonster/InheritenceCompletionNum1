@@ -15,4 +15,13 @@ public class Book extends Product {
                 "Author:             " + getAuthor() + "\n" +
                 "Price:              " + this.getFormattedPrice(getPrice()) + "\n";
     }
+    @Override
+    public boolean equals(Object a){
+        Book c = (Book)a;
+        if (((Book) a).getAuthor().equalsIgnoreCase(c.getAuthor())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
