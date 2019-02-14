@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 
-public class Product extends Main{
+public abstract class Product {
 
     private String code;
     private String description;
@@ -12,10 +12,16 @@ public class Product extends Main{
         description = "";
         price = 0;
     }
+    public Product(String code,String description,int price){
+        super();
+        this.code = code;
+        this.description = description;
+        this.price = price;
+    }
 
     // Get and set accessors for the code, description, and price instance variables
 
-    @Override
+
     public String toString() {
         return  "Code:               " + code + "\n" +
                 "Description:        " + description + "\n" +
@@ -48,7 +54,9 @@ public void setPrice(double price){
   }
   public void setCode(String code){
         this.code=code; }
-  public boolean equals(){
-        return true;
-  }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }

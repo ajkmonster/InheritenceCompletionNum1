@@ -3,6 +3,14 @@ public class Software extends Product {
     private String programmer;
     private String platform; // linux, mac, or pc
     private String os;
+    public Software(){
+
+    }
+    public Software(String code,String description,int price,String programmer, String os){
+        super(code,description,price);
+        this.programmer=programmer;
+        this.os=os;
+    }
     public String getOs(){
     return this.os;
     }
@@ -25,11 +33,11 @@ public class Software extends Product {
     }
     @Override
     public boolean equals(Object a){
-        Software c = (Software)a;
-        if (((Software) a).getProgrammer().equalsIgnoreCase(c.getProgrammer())) {
-            return true;
-        } else {
-            return false;
+            Software c = (Software)a;
+            if (((Software) a).getProgrammer().equalsIgnoreCase(c.getProgrammer())) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
 }
